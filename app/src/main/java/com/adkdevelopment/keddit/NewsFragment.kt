@@ -30,6 +30,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.adkdevelopment.keddit.utils.inflate
 
 /**
  * A placeholder fragment containing a simple view.
@@ -38,6 +39,9 @@ class NewsFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater!!.inflate(R.layout.fragment_news, container, false)
+
+        val rootView = container?.inflate(R.layout.fragment_news)
+
+        return rootView
     }
 }
