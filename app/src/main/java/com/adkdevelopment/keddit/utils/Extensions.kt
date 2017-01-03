@@ -30,8 +30,9 @@ import android.view.View
 import android.view.ViewGroup
 
 /**
+ * Utility class with extension functions.
  * Created by Dmytro Karataiev on 12/28/16.
  */
-fun ViewGroup.inflate(layoutId: Int): View {
-    return LayoutInflater.from(context).inflate(layoutId, this, false)
+fun ViewGroup.inflate(layoutId: Int, attachToRoot: Boolean = false): View {
+    return LayoutInflater.from(context).inflate(layoutId, this, attachToRoot)
 }
